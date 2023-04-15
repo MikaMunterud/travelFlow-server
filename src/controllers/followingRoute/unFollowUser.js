@@ -29,7 +29,6 @@ exports.unFollowUser = async function (req, res) {
         res.status(200).json("User has been unfollowed");
       }
     } catch (err) {
-      console.error(err);
       return res.status(500).json(err);
     }
   } else {
