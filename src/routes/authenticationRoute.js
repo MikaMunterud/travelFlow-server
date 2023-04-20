@@ -11,6 +11,7 @@ const { userLogout } = require("../controllers/authenticationRoute/userLogout");
 const { userDelete } = require("../controllers/authenticationRoute/userDelete");
 const { isLoggedIn } = require("../controllers/authenticationRoute/isLoggedIn");
 
+
 const authenticationRoute = express.Router();
 
 /*

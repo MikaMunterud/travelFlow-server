@@ -5,7 +5,7 @@ exports.addPost = function (req, res) {
 
     const validatedBody = validateNewPost(req.body)
     if (validatedBody.error) {
-        response.status(400).send(validatedBody.error.details[0].message);
+        res.status(400).send(validatedBody.error.details[0].message);
         return;
     }
     const { postText } = validatedBody.value;
@@ -25,7 +25,7 @@ exports.addPost = function (req, res) {
             }
         })
         .catch(error=>{
-            response.status(500).send('Ooops, something went wrong');
+            res.status(500).send('Ooops, something went wrong');
             return
         })
 }

@@ -25,5 +25,3 @@ exports.updatePost = function (req, res) {
             return
         })
 }
-
-

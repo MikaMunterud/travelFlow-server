@@ -1,6 +1,5 @@
 const express = require("express");
 
-
 //Controllers
 const { addPost } = require("../controllers/postsRoute/addPost");
 const { deletePost } = require("../controllers/postsRoute/deletePost");
@@ -23,7 +22,7 @@ postsRoute.post("/add", checkAuthentication, addPost);
 
 postsRoute.get("/:username", postGet);
 
-postsRoute.delete("/delete",checkAuthentication, deletePost);
+postsRoute.delete("/delete", checkAuthentication, deletePost);
 
 postsRoute.post("/like", checkAuthentication, postLike);
 

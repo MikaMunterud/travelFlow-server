@@ -12,6 +12,7 @@ const {
 const { authenticationRoute } = require("../routes/authenticationRoute");
 const { followingRoute } = require("../routes/followingRoute");
 const { postsRoute } = require("../routes/postsRoute");
+const { usersRoute } = require("../routes/usersRoute");
 
 server.use(express.json());
 server.use(cookieParser());
@@ -24,7 +25,10 @@ server.use(
 );
 
 server.use("/authentication", authenticationRoute);
+
+server.use("/users", usersRoute);
 server.use("/posts", postsRoute);
 server.use("/following", checkAuthentication, followingRoute);
+
 
 exports.server = server;
